@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import products from "../data/data.json";
 import FilterProducts from "./FilterProducts";
 import ProductCard from "./ProductCard";
+import DropdownMenu from "./DropdownMenu";
+import "./Products.css";
 
 function Products() {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [searchInput, setSearchInput] = useState("");
+  const [sortTitle, setSortTitle] = useState("Sort");
 
   useEffect(() => {
     if (searchInput === "") {
@@ -24,13 +27,35 @@ function Products() {
       );
     }
   }, [searchInput]);
+
+  const handleDropDownChange = (e) => {
+    if (e.target.value === "Price Low to High") {
+      setFilteredProducts(filteredProducts.sort((a, b) => a.price - b.price));
+      setSortTitle(e.target.value);
+    }
+    if (e.target.value === "Price High to Low") {
+      setFilteredProducts(filteredProducts.sort((a, b) => b.price - a.price));
+      setSortTitle(e.target.value);
+    }
+  };
+
   return (
-    <div>
-      <FilterProducts
-        setSearchInput={setSearchInput}
-        searchInput={searchInput}
-      />
-      <ul>
+    <>
+      <div className="sortfilter-container">
+        <FilterProducts
+          setSearchInput={setSearchInput}
+          searchInput={searchInput}
+        />
+        <DropdownMenu
+          label="Sort Items: "
+          name="Sort"
+          optionOne="Price Low to High"
+          optionTwo="Price High to Low"
+          dropDownValue={sortTitle}
+          handleDropDownChange={handleDropDownChange}
+        />
+      </div>
+      <ul className="productcard-container">
         {filteredProducts.map((product) => {
           return (
             <ProductCard
@@ -42,7 +67,7 @@ function Products() {
           );
         })}
       </ul>
-    </div>
+    </>
   );
 }
 
