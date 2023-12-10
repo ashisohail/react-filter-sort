@@ -20,7 +20,10 @@ function Products() {
   }, [searchInput]);
   return (
     <div>
-      <FilterProducts setSearchInput={setSearchInput} />
+      <FilterProducts
+        setSearchInput={setSearchInput}
+        searchInput={searchInput}
+      />
       <ul>
         {filteredProducts.map((product) => {
           return (
