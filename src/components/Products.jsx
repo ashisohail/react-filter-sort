@@ -12,8 +12,14 @@ function Products() {
       setFilteredProducts(products);
     } else {
       setFilteredProducts(
-        filteredProducts.filter((product) =>
-          product.name.toLocaleLowerCase().includes(searchInput.toLowerCase())
+        filteredProducts.filter(
+          (product) =>
+            product.name
+              .toLocaleLowerCase()
+              .includes(searchInput.toLowerCase()) ||
+            product.category
+              .toLocaleLowerCase()
+              .includes(searchInput.toLowerCase())
         )
       );
     }
