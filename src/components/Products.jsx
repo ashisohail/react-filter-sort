@@ -56,13 +56,15 @@ function Products() {
         />
       </div>
       <ul className="productcard-container">
-        {filteredProducts.map((product) => {
+        {filteredProducts.map((product, index) => {
           return (
             <ProductCard
               key={product.name}
               name={product.name}
               category={product.category}
               price={product.price}
+              index={index}
+              setFilteredProducts={setFilteredProducts}
             />
           );
         })}
