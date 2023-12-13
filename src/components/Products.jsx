@@ -4,6 +4,7 @@ import FilterProducts from "./FilterProducts";
 import ProductCard from "./ProductCard";
 import DropdownMenu from "./DropdownMenu";
 import "./Products.css";
+import AddProduct from "./AddProduct";
 
 function Products() {
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -69,6 +70,7 @@ function Products() {
           );
         })}
       </ul>
+      <AddProduct setFilteredProducts={setFilteredProducts} />
     </>
   );
 }

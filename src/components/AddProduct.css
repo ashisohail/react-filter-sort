@@ -1,0 +1,26 @@
+.add-product {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.add-product > label {
+  display: none;
+}
+.add-product > input {
+  padding: 10px;
+  margin: 5px;
+}
+
+.add-product > button {
+  padding: 10px;
+  margin: 5px;
+}
