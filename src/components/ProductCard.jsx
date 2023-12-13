@@ -16,6 +16,7 @@ function ProductCard({ name, category, price, index, setFilteredProducts }) {
       >
         Delete
       </button>
+      <button className="btn edit">Edit</button>
     </div>
   );
 }

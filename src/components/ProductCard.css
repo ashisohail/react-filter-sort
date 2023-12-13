@@ -9,3 +9,12 @@
   text-align: left;
   width: 200px;
 }
+
+.btn {
+  margin-top: 10px;
+  padding: 2px 10px;
+}
+
+.edit {
+  margin-left: 10px;
+}
