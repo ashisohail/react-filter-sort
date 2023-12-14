@@ -1,0 +1,28 @@
+.edit-product {
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  text-align: left;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+}
+.edit-product > label {
+  display: none;
+}
+.edit-product > input {
+  padding: 2px;
+  margin: 2px;
+}
+
+.btn-container {
+  margin-top: 5px;
+}
+.btn {
+  margin-top: 10px;
+  padding: 2px 10px;
+}
+
+.save {
+  margin-left: 10px;
+}
