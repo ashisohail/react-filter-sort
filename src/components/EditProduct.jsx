@@ -55,6 +55,7 @@ function EditProduct({
         value={editProduct.name}
         placeholder="Name"
         id="name"
+        required
       />
 
       <label htmlFor="category">Category:</label>
@@ -65,6 +66,7 @@ function EditProduct({
         value={editProduct.category}
         placeholder="Category"
         id="category"
+        required
       />
 
       <label htmlFor="price">price:</label>
@@ -75,6 +77,7 @@ function EditProduct({
         value={editProduct.price}
         placeholder="Price"
         id="price"
+        required
       />
       <div className="btn-container">
         <button className="btn" onClick={() => setIsProduct(true)}>

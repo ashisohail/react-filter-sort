@@ -38,6 +38,7 @@ function AddProduct({ setFilteredProducts }) {
         value={addProduct.name}
         placeholder="Name"
         id="name"
+        required
       />
 
       <label htmlFor="category">Category:</label>
@@ -48,6 +49,7 @@ function AddProduct({ setFilteredProducts }) {
         value={addProduct.category}
         placeholder="Category"
         id="category"
+        required
       />
 
       <label htmlFor="price">price:</label>
@@ -58,6 +60,7 @@ function AddProduct({ setFilteredProducts }) {
         value={addProduct.price}
         placeholder="Price"
         id="price"
+        required
       />
 
       <button>Add</button>
