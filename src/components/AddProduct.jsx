@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AddProduct.css";
+import axios from "axios";
 
 function AddProduct({ setFilteredProducts }) {
   const [addProduct, setAddProduct] = useState({
@@ -23,9 +24,26 @@ function AddProduct({ setFilteredProducts }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setAddProduct({ name: "", category: "", price: "" });
-    setFilteredProducts((preProducts) => {
-      return [...preProducts, addProduct];
-    });
+
+    // Adding product/recepies to the DB
+    axios
+      .post("http://localhost:3001/recipies", addProduct)
+      .then((response) => {
+        if (response.status === 201) {
+          setFilteredProducts((preProducts) => {
+            return [...preProducts, addProduct];
+          });
+        } else {
+          setFilteredProducts((preProducts) => {
+            return [...preProducts];
+          });
+        }
+      })
+      .catch(() => {
+        alert(
+          "There was an error while adding recepie to the database, Please try again."
+        );
+      });
   };
 
   return (
