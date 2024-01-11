@@ -54,6 +54,7 @@ function ProductCard({
           price={price}
           setIsProduct={setIsProduct}
           index={index}
+          id={id}
         />
       )}
     </div>

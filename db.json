@@ -2,14 +2,14 @@
   "recipies": [
     {
       "name": "Mix veg",
-      "category": "curries",
-      "price": 20,
+      "category": "Veg",
+      "price": "40",
       "id": "7fee"
     },
     {
-      "name": "Lamb curry",
+      "name": "Lamb Karahi",
       "category": "curries",
-      "price": 25,
+      "price": "80",
       "id": "221c"
     },
     {

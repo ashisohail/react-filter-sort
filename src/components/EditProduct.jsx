@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./EditProduct.css";
+import axios from "axios";
 
 function EditProduct({
   setFilteredProducts,
@@ -8,6 +9,7 @@ function EditProduct({
   category,
   price,
   index,
+  id,
 }) {
   const [editProduct, setEditProduct] = useState({
     name: name,
@@ -28,21 +30,39 @@ function EditProduct({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFilteredProducts((preProducts) => {
-      // make a copy of products
-      const productsCopy = [...preProducts];
-      // get the product to be updated
-      const productToReplace = productsCopy[index];
-      // update the product
-      productToReplace.name = editProduct.name;
-      productToReplace.category = editProduct.category;
-      productToReplace.price = editProduct.price;
-      // replace the item at specified index
-      productsCopy[index] = productToReplace;
-      // close product edit form
-      setIsProduct(true);
-      return productsCopy;
-    });
+    axios
+      .put(`http://localhost:3001/recipies/${id}`, {
+        name: editProduct.name,
+        category: editProduct.category,
+        price: editProduct.price,
+      })
+      .then((response) => {
+        if (response.status === 200) {
+          setFilteredProducts((preProducts) => {
+            // make a copy of products
+            const productsCopy = [...preProducts];
+            // get the product to be updated
+            const productToReplace = productsCopy[index];
+            // update the product
+            productToReplace.name = editProduct.name;
+            productToReplace.category = editProduct.category;
+            productToReplace.price = editProduct.price;
+            // replace the item at specified index
+            productsCopy[index] = productToReplace;
+            // close product edit form
+            setIsProduct(true);
+            return productsCopy;
+          });
+        } else {
+          setFilteredProducts((preProducts) => {
+            setIsProduct(true);
+            return [...preProducts];
+          });
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
