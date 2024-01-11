@@ -1,12 +1,6 @@
 {
   "recipies": [
     {
-      "name": "Chicken Tikka",
-      "category": "curries",
-      "price": 20,
-      "id": "ac09"
-    },
-    {
       "name": "Mix veg",
       "category": "curries",
       "price": 20,
@@ -67,64 +61,10 @@
       "price": "25"
     },
     {
-      "id": "9598",
-      "name": "",
-      "category": "",
-      "price": ""
-    },
-    {
-      "id": "b1da",
-      "name": "",
-      "category": "",
-      "price": ""
-    },
-    {
-      "id": "016c",
-      "name": "Chai",
-      "category": "beverages",
-      "price": "50"
-    },
-    {
-      "id": "612a",
-      "name": "Chai2",
-      "category": "beverages",
-      "price": "30"
-    },
-    {
-      "id": "7ef0",
-      "name": "Chai3",
-      "category": "beverages",
-      "price": "20"
-    },
-    {
-      "id": "b4c6",
-      "name": "beryani2",
-      "category": "Curry",
-      "price": "50"
-    },
-    {
-      "id": "6cce",
-      "name": "beryani3",
-      "category": "Rice",
-      "price": "25"
-    },
-    {
       "id": "8df1",
       "name": "Muffin",
       "category": "Dessert",
       "price": "30"
-    },
-    {
-      "id": "bedf",
-      "name": "French Fries",
-      "category": "Fast food",
-      "price": "20"
-    },
-    {
-      "id": "a900",
-      "name": "Sohail ",
-      "category": "beverages",
-      "price": "40"
     },
     {
       "id": "6896",

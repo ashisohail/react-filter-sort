@@ -109,6 +109,7 @@ function Products() {
               name={product.name}
               category={product.category}
               price={product.price}
+              id={product.id}
               index={index}
               setFilteredProducts={setFilteredProducts}
             />
