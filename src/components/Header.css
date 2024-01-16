@@ -1,0 +1,52 @@
+header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.nav-container {
+  transition: all 0.3s ease-in-out;
+}
+
+.logo > a {
+  font-family: "Bruno Ace", sans-serif;
+  font-size: large;
+  font-weight: bolder;
+  color: black;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  padding-left: 50px;
+}
+
+.nav-bar {
+  display: flex;
+  column-gap: 30px;
+}
+
+.nav-bar > a {
+  text-decoration: none;
+  font-family: "Bruno Ace", sans-serif;
+  font-size: small;
+  font-weight: bolder;
+  color: black;
+  opacity: 0.8;
+  transition: all 0.4s ease-in-out;
+  padding-right: 50px;
+}
+
+.nav-bar > a:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+.logo > a:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}

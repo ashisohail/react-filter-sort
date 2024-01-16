@@ -85,7 +85,7 @@ function Products() {
   };
 
   return (
-    <>
+    <div className="product-container">
       <div id="error"></div>
       <div className="sortfilter-container">
         <FilterProducts
@@ -117,7 +117,7 @@ function Products() {
         })}
       </ul>
       <AddProduct setFilteredProducts={setFilteredProducts} />
-    </>
+    </div>
   );
 }
 
